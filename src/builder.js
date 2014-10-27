@@ -1,4 +1,4 @@
-var domModeler = require('abstractor');
+var abstractor = require('abstractor');
 
 module.exports = function(mod, tpl) {
 	if(!arguments.length) throw new Error("Missing model and template");
@@ -96,5 +96,5 @@ module.exports = function(mod, tpl) {
 		return html;
 	};
 
-	return buildHtml(domModeler(tpl), mod);
+	return buildHtml(abstractor(tpl), mod);
 };
